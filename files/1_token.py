@@ -22,7 +22,6 @@ else :
         status = simulator.status()
         print(simulator.configuration().n_qubits, "qubits\t", simulator.name, "[", status.pending_jobs, "jobs in queue ]")
 
-
 computers = service.backends(simulator=False, operational=True)
 
 print("\nAvailable computers:\n")
@@ -32,6 +31,5 @@ else :
     for computer in computers :
         status = computer.status()
         print(computer.configuration().n_qubits, "qubits\t", computer.name, "[", status.pending_jobs, "jobs in queue ]")
-
 
 print()

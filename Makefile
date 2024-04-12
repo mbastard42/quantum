@@ -1,13 +1,12 @@
 NAME = quantum
-
 MOUNT = ./files
 DEST = /data
 
-build:
-	docker build -t $(NAME) .
-
 run:
 	docker run -it -v $(MOUNT):$(DEST) $(NAME)
+	
+build:
+	docker build -t $(NAME) .
 
 clean:
 	docker system prune -af
