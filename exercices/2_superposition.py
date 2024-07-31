@@ -13,4 +13,4 @@ simulator = AerSimulator()
 job = simulator.run(circuit, shots=500)
 result = job.result()
 
-plt = plot_histogram(result.get_counts(), filename="tmp/ex2_histogram.png")
+plt = plot_histogram(result.get_counts(), filename="../tmp/ex2_histogram.png")
